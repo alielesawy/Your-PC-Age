@@ -37,11 +37,20 @@ namespace Machine_age_GUI {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::LinkLabel^  linkLabel1;
+
+	protected:
+
+
+
+
+
 
 	protected:
 
@@ -59,100 +68,119 @@ namespace Machine_age_GUI {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// button1
+			// pictureBox1
 			// 
-			this->button1->BackColor = System::Drawing::Color::GhostWhite;
-			this->button1->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button1->Location = System::Drawing::Point(57, 220);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(171, 29);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"Click To Show Machine Age";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(0, 0);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(1366, 768);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox1->TabIndex = 0;
+			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &MyForm::pictureBox1_Click);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Segoe Print", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(29, 35);
+			this->label1->ForeColor = System::Drawing::Color::Blue;
+			this->label1->Location = System::Drawing::Point(258, 146);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(58, 37);
+			this->label1->Size = System::Drawing::Size(44, 24);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Day";
-			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click_1);
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe Print", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(142, 35);
+			this->label2->ForeColor = System::Drawing::Color::Brown;
+			this->label2->Location = System::Drawing::Point(415, 146);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(86, 37);
+			this->label2->Size = System::Drawing::Size(68, 24);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Month";
-			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Segoe Print", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(91, 87);
+			this->label3->ForeColor = System::Drawing::Color::Chocolate;
+			this->label3->Location = System::Drawing::Point(610, 146);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(81, 37);
+			this->label3->Size = System::Drawing::Size(50, 24);
 			this->label3->TabIndex = 3;
-			this->label3->Text = L"  Year";
-			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
+			this->label3->Text = L"Year";
+			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click_1);
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(128, 188);
+			this->label4->ForeColor = System::Drawing::Color::Black;
+			this->label4->Location = System::Drawing::Point(429, 29);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(10, 13);
+			this->label4->Size = System::Drawing::Size(98, 24);
 			this->label4->TabIndex = 4;
-			this->label4->Text = L" ";
+			this->label4->Text = L"Let\'s Start";
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(351, 273);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(246, 34);
+			this->button1->TabIndex = 5;
+			this->button1->Text = L"Click to calculate PC age";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_1);
+			// 
+			// linkLabel1
+			// 
+			this->linkLabel1->AutoSize = true;
+			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Lucida Sans", 9.75F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->linkLabel1->Location = System::Drawing::Point(12, 317);
+			this->linkLabel1->Name = L"linkLabel1";
+			this->linkLabel1->Size = System::Drawing::Size(104, 15);
+			this->linkLabel1->TabIndex = 6;
+			this->linkLabel1->TabStop = true;
+			this->linkLabel1->Text = L"Contact with me";
+			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &MyForm::linkLabel1_LinkClicked);
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(284, 261);
+			this->ClientSize = System::Drawing::Size(902, 350);
+			this->Controls->Add(this->linkLabel1);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->pictureBox1);
+			this->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 14.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
+			this->Margin = System::Windows::Forms::Padding(6);
 			this->Name = L"MyForm";
 			this->Text = L"Machine age";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		c.getDate();
-		c.crop();
-		c.m_age();
-		c.calc();
-		int x = c.d, y = c.m, z = c.y;
 
-		label1->Text = String::Format(L"Days={0}", x);
-		label2->Text = String::Format(L"Months={0}", y);
-		label3->Text = String::Format(L"Years={0}", z);
 
 	}
 	private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -163,9 +191,41 @@ namespace Machine_age_GUI {
 	private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
-
+	label1->Parent = pictureBox1;
+	label1->BackColor = Color().Transparent;
+	label2->Parent = pictureBox1;
+	label2->BackColor = Color().Transparent;
+	label3->Parent = pictureBox1;
+	label3->BackColor = Color().Transparent;
+	label4->Parent = pictureBox1;
+	label4->BackColor = Color().Transparent;
 }
 private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void label3_Click_1(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
+	c.getDate();
+	c.crop();
+	c.m_age();
+	c.calc();
+	int x = c.d, y = c.m, z = c.y;
+	label4->Text = "Your Pc Age Is";
+	label1->Text = String::Format(L"Days={0}", x);
+	label2->Text = String::Format(L"Months={0}", y);
+	label3->Text = String::Format(L"Years={0}", z);
+	button1->Text = "Thank You";
+	
+}
+private: System::Void linkLabel1_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
+	linkLabel1->LinkVisited = true;
+	System::Diagnostics::Process().Start("https://www.linkedin.com/in/alielesawy");
+
+}
+private: System::Void linkLabel2_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
+
 }
 };
 
