@@ -42,4 +42,8 @@ void calc_age::calc()
 	{
 		d = getDay() - Day;
 	}
+	if (getMonth()>2)
+	{
+		d += 2;
+	}
 }

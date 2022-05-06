@@ -34,7 +34,6 @@ void cmd::m_age()
 	swap(a[1], a[4]);
 	int day = atoi(a);
 	Day = day;
-
 	swap(a[0], a[6]);
 	swap(a[1], a[7]);
 	int year = atoi(a) + 2000;

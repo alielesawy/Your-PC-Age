@@ -12,6 +12,5 @@ void main(){
 	c.getDate();
 	c.crop();
 	c.calc();
-	cout << c.d << "//" << c.m << "//" << c.y << endl;
 }
 
