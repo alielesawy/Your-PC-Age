@@ -86,11 +86,12 @@ namespace Machine_age_GUI {
 			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->BackColor = System::Drawing::SystemColors::Control;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(0, 0);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(1366, 768);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &MyForm::pictureBox1_Click);
@@ -98,24 +99,24 @@ namespace Machine_age_GUI {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 26.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+			this->label1->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 27.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::Blue;
-			this->label1->Location = System::Drawing::Point(329, 338);
+			this->label1->Location = System::Drawing::Point(350, 178);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(86, 44);
+			this->label1->Size = System::Drawing::Size(90, 46);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Day";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 26.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+			this->label2->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 27.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::Brown;
-			this->label2->Location = System::Drawing::Point(613, 338);
+			this->label2->Location = System::Drawing::Point(641, 178);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(131, 44);
+			this->label2->Size = System::Drawing::Size(138, 46);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Month";
 			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click_1);
@@ -123,12 +124,12 @@ namespace Machine_age_GUI {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 26.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+			this->label3->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 27.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::Chocolate;
-			this->label3->Location = System::Drawing::Point(950, 338);
+			this->label3->Location = System::Drawing::Point(969, 178);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(97, 44);
+			this->label3->Size = System::Drawing::Size(101, 46);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"Year";
 			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click_1);
@@ -137,12 +138,12 @@ namespace Machine_age_GUI {
 			// 
 			this->label4->AutoEllipsis = true;
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 20.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+			this->label4->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 30, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::Color::Black;
-			this->label4->Location = System::Drawing::Point(625, 191);
+			this->label4->ForeColor = System::Drawing::Color::Aqua;
+			this->label4->Location = System::Drawing::Point(524, 447);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(151, 34);
+			this->label4->Size = System::Drawing::Size(220, 50);
 			this->label4->TabIndex = 4;
 			this->label4->Text = L"Let\'s Start";
 			// 
@@ -185,7 +186,7 @@ namespace Machine_age_GUI {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 26.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::Lime;
-			this->label5->Location = System::Drawing::Point(502, 338);
+			this->label5->Location = System::Drawing::Point(522, 178);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(30, 44);
 			this->label5->TabIndex = 8;
@@ -197,7 +198,7 @@ namespace Machine_age_GUI {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Neo Tech Alt Medium", 26.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::Color::Blue;
-			this->label6->Location = System::Drawing::Point(831, 338);
+			this->label6->Location = System::Drawing::Point(859, 178);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(30, 44);
 			this->label6->TabIndex = 9;
@@ -228,7 +229,7 @@ namespace Machine_age_GUI {
 			this->Margin = System::Windows::Forms::Padding(6);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Machine age";
+			this->Text = L"How old my PC";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
@@ -287,7 +288,7 @@ private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs
 }
 private: System::Void linkLabel1_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
 	linkLabel1->LinkVisited = true;
-	System::Diagnostics::Process().Start("https://www.linkedin.com/in/alielesawy");
+	System::Diagnostics::Process().Start("https://www.facebook.com/alielesawy00");
 
 }
 private: System::Void linkLabel2_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {

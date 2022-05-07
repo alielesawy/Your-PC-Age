@@ -1,6 +1,5 @@
 #include "MyForm.h"
 #include"calc_age.h"
-
 using namespace System;
 using namespace System::Windows::Forms;
 [STAThreadAttribute]
