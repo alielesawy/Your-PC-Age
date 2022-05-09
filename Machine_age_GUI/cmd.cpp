@@ -1,44 +1,54 @@
 #include "cmd.h"
 #include "curr_time.h"
-#include<cstdlib>
+#include<sstream>
 #include<iostream>
+#include<string>
+
 using namespace std;
 
-void cmd::getDate()
+void cmd::Doing_cmd()
 {
 	FILE *fp;
-	fp = _popen("wmic bios get Name", "r");
+	fp = _popen("systeminfo | findstr /I /c:bios ", "r");
 	while (fgets(var, sizeof(var), fp) != NULL)
 	{
-		var;
+		cout << var;
 	}
 	_pclose(fp);
 }
-void cmd::crop()
+void cmd::getDate()
 {
-	for (size_t i = 0; i < 9; i++)
+	int flag = 0;
+	string d = "", m = "", y = "";
+	int c = 0;
+	for (size_t i = 0; i <sizeof(var); i++)
 	{
-		a[i] = var[i + 11];
+		if (var[i] == ',')
+			flag = i;
 	}
-	for (size_t i = 0; i < 9; i++)
+	flag += 2;
+	for (size_t i = 0; i < 10; i++)
 	{
-		cout << a[i];
-	}
-}
-void cmd::m_age()
-{
-	int m = atoi(a);
-	Month = m;
+		if (var[i + flag] == '/')
+		{
+			c++;
+			continue;
+		}
 
-	swap(a[0], a[3]);
-	swap(a[1], a[4]);
-	int day = atoi(a);
-	Day = day;
-	swap(a[0], a[6]);
-	swap(a[1], a[7]);
-	int year = atoi(a) + 2000;
-	Year = year;
+		if (c == 0)
+			m += var[i + flag];
+		else if (c == 1)
+			d += var[i + flag];
+		else  if (c == 2)
+			y += var[i + flag];
+	}
+	Day = std::stoi(d);
+	Month = std::stoi(m);
+	Year = std::stoi(y);
 }
+
+
+
 void cmd::swap(char&a, char&b)
 {
 	int temp = a;

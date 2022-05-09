@@ -261,6 +261,9 @@ private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e
 	label5->BackColor = Color().Transparent;
 	label6->Parent = pictureBox1;
 	label6->BackColor = Color().Transparent;
+	c.Doing_cmd();
+	c.getDate();
+	c.calc();
 	
 }
 private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -270,10 +273,7 @@ private: System::Void pictureBox1_Click(System::Object^  sender, System::EventAr
 private: System::Void label3_Click_1(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
-	c.getDate();
-	c.crop();
-	c.m_age();
-	c.calc();
+
 	int x = c.d, y = c.m, z = c.y;
 	label4->Text = "Your Pc Age Is";
 	label1->Text = String::Format(L"Days={0}", x);
@@ -297,10 +297,7 @@ private: System::Void linkLabel2_LinkClicked(System::Object^  sender, System::Wi
 private: System::Void label2_Click_1(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-	c.getDate();
-	c.crop();
-	c.m_age();
-
+	
 	int x = c.Day, y = c.Month, z = c.Year;
 	label4->Text = "Your Pc Born In";
 	label1->Text = String::Format(L"{0}", x);

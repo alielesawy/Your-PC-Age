@@ -8,9 +8,8 @@ class cmd : public curr_time
 
 public:
 	int Month, Year, Day;
+	void Doing_cmd();
 	void getDate();
-	void crop();
-	void m_age();
 	
 
 };
